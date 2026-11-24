@@ -237,37 +237,6 @@
     }
   });
 
-  /* ---------- pick the right form option from the buttons ---------- */
-  var intentSelect = $('#f-intent');
-  $$('[data-intent]').forEach(function (a) {
-    a.addEventListener('click', function () {
-      if (intentSelect) intentSelect.value = a.getAttribute('data-intent');
-    });
-  });
-
-  /* ---------- contact form: opens the visitor's email app, no server needed ---------- */
-  var form = $('#contactForm');
-  var note = $('#formNote');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = form.elements.name, email = form.elements.email, msg = form.elements.message;
-      var ok = true;
-      [name, email, msg].forEach(function (f) { f.classList.remove('is-bad'); });
-      if (!name.value.trim()) { name.classList.add('is-bad'); ok = false; }
-      if (!/^\S+@\S+\.\S+$/.test(email.value.trim())) { email.classList.add('is-bad'); ok = false; }
-      if (!msg.value.trim()) { msg.classList.add('is-bad'); ok = false; }
-      if (!ok) { note.textContent = 'Please fill in your name, a valid email and a short message.'; return; }
-
-      var subjects = { project: 'Project enquiry', role: 'Role enquiry', other: 'Hello' };
-      var subject = (subjects[form.elements.intent.value] || 'Hello') + ' from ' + name.value.trim();
-      var text = msg.value.trim() + '\n\n' + name.value.trim() + '\n' + email.value.trim();
-      var to = SITE.email || 'connect.minu@gmail.com';
-      window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text);
-      note.textContent = 'Opening your email app. If nothing opens, write to ' + to + ' directly.';
-    });
-  }
-
   /* ---------- copy email ---------- */
   var copyBtn = $('#copyEmail');
   if (copyBtn) {

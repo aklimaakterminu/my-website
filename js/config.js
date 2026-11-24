@@ -2,7 +2,7 @@
    Your details — edit this file, save, re-upload. Nothing else needs touching.
    ========================================================================== */
 window.SITE = {
-  // Shown in the contact section and used by the "Send message" form
+  // Shown in the contact section (with a Copy button)
   email: 'connect.minu@gmail.com',
 
   // Your LinkedIn profile address

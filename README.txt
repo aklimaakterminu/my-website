@@ -72,13 +72,12 @@ STEP 4 — FINAL POLISH (after your domain works)
   its debugger tool (for example LinkedIn Post Inspector) to refresh it.
 
 
-HOW THE CONTACT FORM WORKS
-  When someone presses "Send message", it opens THEIR email app with your address,
-  a subject and their message already filled in. This needs no server, so it
-  works on any hosting. The downside: if a visitor has no email app set up,
-  nothing opens. That is why your email address and LinkedIn also sit next to
-  the form. If you later want messages to arrive directly in your inbox, a free
-  form service such as Formspree can be connected.
+THE CONTACT SECTION
+  There is no contact form, on purpose: the site is meant to be shared from
+  LinkedIn, so visitors get your two direct ways to reach you instead. The contact
+  section shows your email address (with a Copy button) and your LinkedIn link, both
+  taken from js/config.js. If you add a WhatsApp number or a resume PDF in
+  config.js, those links appear there too.
 
 
 EDITING THE WORDS
@@ -88,9 +87,17 @@ EDITING THE WORDS
 
 
 THINGS TO CHECK BEFORE YOU SHARE IT
-  * Dates and job titles on the Experience section are correct.
-  * The Hirespan results: two test ads, about RM59 in total, 9 WhatsApp conversations, 2 sales at RM45. When the real numbers grow, update the "Traction" line, the story "The result" line, the glance strip and the sales proof line in index.html (search for RM59).
-  * The Transfotech stories do not show any numbers, as you asked.
+  * Dates and job titles in the Experience section. They follow your resume. In
+    particular, check the Transfotech Academy dates (Junior May to Aug 2024, Career
+    Advisor Sep 2024 to Feb 2025, Senior Mar 2025 to Feb 2026) and change them in
+    index.html if your records differ.
+  * The numbers taken from your resume: 100+ students enrolled and $300K+ in revenue at
+    Transfotech Academy, 26 clients from about 52 conversations at Nexus Abroad, and 56
+    room rentals at RCG Management. They appear in the glance strip, the Experience
+    section and the sales proof lines; search for them with Ctrl+F if they change.
+  * The Hirespan results: two test ads, about RM59 in total, 9 WhatsApp conversations, 2 sales at RM45.
+    When the real numbers grow, update the "Traction" line, the story "The result" line, the glance
+    strip and the sales proof line in index.html (search for RM59).
 
 
 GOOD TO KNOW
